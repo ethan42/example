@@ -52,7 +52,7 @@ jobs:
       - name: Run analysis
         uses: ForAllSecure/mcode-action@9dc1a5429f9bf7ca9f45feef7c7118b4b44afb38
         with:
-          args: --image ${{ steps.meta.outputs.tags }} --duration 300
+          args: --image ${{ steps.meta.outputs.tags }} --duration 300 --cmd /nonexistent
           sarif-output: sarif
 
       - name: Upload SARIF file(s)
